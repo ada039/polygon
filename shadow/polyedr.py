@@ -190,9 +190,9 @@ class Polyedr:
 
     def good_area_sum(self):
         total_area = 0.0
-        for facet in self.origfacets:
-            if facet.is_good_facet():
-                total_area += facet.area()
+        for i in len(self.origfacets):
+            if self.facets[i].facet.is_good_facet():
+                total_area += self.origfacets[i].area()
 
         return total_area
 
